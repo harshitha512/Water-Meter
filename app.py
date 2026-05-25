@@ -521,10 +521,10 @@ def report():
 if __name__ == "__main__":
     init_db()
     print("")
-    print("  Water Meter --> http://localhost:8080/login")
+    print("  Water Meter --> http://localhost:5000/login")
     print("  username: admin   password: admin123")
     print("  username: user1   password: water456")
     print("")
-import os
-port = int(os.environ.get("PORT", 8080))
-app.run(host="0.0.0.0", port=port, debug=False)
+    import os
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port, debug=False)
