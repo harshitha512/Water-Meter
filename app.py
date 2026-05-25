@@ -525,4 +525,6 @@ if __name__ == "__main__":
     print("  username: admin   password: admin123")
     print("  username: user1   password: water456")
     print("")
-    app.run(host="0.0.0.0", port=8080, debug=False)
+import os
+port = int(os.environ.get("PORT", 8080))
+app.run(host="0.0.0.0", port=port, debug=False)
